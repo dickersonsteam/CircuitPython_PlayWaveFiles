@@ -4,17 +4,20 @@ import board
 
 
 # make the 2 input buttons
-buttonA = DigitalInOut(board.BUTTON_A)
+buttonA = DigitalInOut(board.D0)
 buttonA.direction = Direction.INPUT
 buttonA.pull = Pull.DOWN
 
 
-buttonB = DigitalInOut(board.BUTTON_B)
+buttonB = DigitalInOut(board.D1)
 buttonB.direction = Direction.INPUT
 buttonB.pull = Pull.DOWN
 
+# if you have more buttons, simply copy the three lines above and set the board.D0
+# to an available pin like board.D11
 
 # The two files assigned to buttons A & B
+# if you have more files, add their names here
 audiofiles = ["rimshot.wav", "laugh.wav"]
 
 
